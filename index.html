@@ -7,7 +7,41 @@
     <meta name="author" content="Cameron Pittman">
     <title>Cameron Pittman: Portfolio</title>
 
-    <link href="public/css/app.css" rel="stylesheet" media="screen">
+    <script>
+			function loadCSS( href, before, media, callback ){
+				"use strict";
+
+				var ss = window.document.createElement( "link" );
+				var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+				var sheets = window.document.styleSheets;
+				ss.rel = "stylesheet";
+				ss.href = href;
+
+				ss.media = "only x";
+				ss.onload = callback || function() {};
+
+				ref.parentNode.insertBefore( ss, ref );
+
+				function toggleMedia(){
+					var defined;
+					for( var i = 0; i < sheets.length; i++ ){
+						if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+							defined = true;
+						}
+					}
+					if( defined ){
+						ss.media = media || "all";
+					}
+					else {
+						setTimeout( toggleMedia );
+					}
+				}
+				toggleMedia();
+				return ss;
+			}
+			loadCSS("public/css/app.css");
+		</script>
+		<noscript><link href="public/css/app.css" rel="stylesheet"></noscript>
 
     <script src="public/js/app.js" async></script>
 
