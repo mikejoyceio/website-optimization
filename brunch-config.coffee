@@ -8,6 +8,8 @@ exports.config =
     public: 'public'
   files:
     javascripts:
-      joinTo: 'js/app.js': /^app\/js/
+      joinTo: 'js/app.js': /^app\/js\//		
     stylesheets:
-      joinTo: 'css/app.css': /^app\/css/
+      joinTo: 
+      	'css/style.css': /^app\/css\/style\//
+      	'css/print.css': /^app\/css\/print\//		
