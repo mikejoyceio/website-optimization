@@ -28,11 +28,11 @@
 
 ![Breakdown Image 06](readme_images/breakdown-06.png)
 
-######After removing height & width styles applied to the pizza image tag and resizing the pizza image
+######After removing height & width styles from pizza image tag and resizing the image
 
 ![Breakdown Image 07](readme_images/breakdown-07.png)
 
-######After including the window.reaquestAnimationFrame method in the on scroll event handler
+######After including the window.reaquestAnimationFrame method
 
 ![Breakdown Image 08](readme_images/breakdown-08.png)
 
