@@ -188,6 +188,58 @@ window.addEventListener('scroll', function() {
 
 ###Resized Pizzas
 
+Moved the determineDx function out of loop. Selected only the first .randomPizzaContainer in the document.
+
+```
+function changePizzaSizes(size) {
+	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+  for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+    document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+  }
+}
+```
+
+Moved the newwidth calculation out of loop. Again, selected only the first .randomPizzaContainer element in the document.
+
+```
+function changePizzaSizes(size) {
+	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+  for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+  }
+}
+```
+
+Create a new variable to hold all of the .randomPizzaContainer elements in the document. Loop through them.
+
+```
+function changePizzaSizes(size) {
+	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+  var elements = document.querySelectorAll(".randomPizzaContainer");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.width = newwidth;
+  }
+}
+```
+
+Optimized loop to a reduce checks by iterating backwards through the elements.
+
+```
+function changePizzaSizes(size) {
+	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+  var elements = document.querySelectorAll(".randomPizzaContainer");
+  for (var i = elements.length; i--;) {
+    elements[i].style.width = newwidth;
+  }
+}
+```
+
+
+
 ##Optimization Breakdown (tl;dr)
 
 ###Sliding Pizzas
@@ -229,6 +281,11 @@ window.addEventListener('scroll', function() {
 ######Resize time before fixes
 
 ![Breakdown Image 09](readme_images/breakdown-09.png)
+
+######Resize time after fixes
+
+![Breakdown Image 10](readme_images/breakdown-10.png)
+
 
 ##Resources
 
