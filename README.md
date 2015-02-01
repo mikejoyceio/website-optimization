@@ -24,11 +24,11 @@ I used the [Brunch](http://brunch.io) build tool for this project.
 
 ######
 
-Install Brunch
+######Install Brunch
 
 `npm install -g brunch`
 
-Build
+######Build
 
 `brunch build --production`
 
