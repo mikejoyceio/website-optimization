@@ -37,13 +37,15 @@ More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/
 
 ###Sliding Pizzas
 
-Read through the code in pizza.js (originally main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+I read through the code in pizza.js (originally main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
 Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
 
-Looked into loop optimisation and ended up changing up the loops contained in the updatePositions and onDOMContentLoaded event handler.
+I then made the following changes to the code:
+
+Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
 ```
 function updatePositions() {
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-Moved onto the DOMContentLoad handler which fires a function to generate the sliding pizzas and reduced the amount of sliding pizza elements the for loop generates from 200 down to 31, which sufficiently fills the screen with sliding pizzas.
+Reduced the amount of sliding pizza elements generated from 200 down to 31, which still sufficiently fills the screen with sliding pizzas.
 
 ```
 document.addEventListener('DOMContentLoaded', function() {
@@ -105,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ``` 
 
-Applied transform and force GPU hardware acceleration to items within updatePositions function.
+Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function. 
 
 
 ```
@@ -132,7 +134,7 @@ function updatePositions() {
 }
 ```
 
-Move the scrollTop / 1250 outside of the loop
+Moved the calculation which utilizes the scrollTop method outside of the loop.
 
 ```
 function updatePositions() {
@@ -160,7 +162,7 @@ function updatePositions() {
 }
 ```
 
-Remove height and width styles from pizza elements generated in the DOMContentLoaded function. Resize pizza image and name pizza-slider.png.
+Removed height and width styles from the generated pizza elements and resized the pizza image to 100 x 100 to prevent the browser from having to resize the images.
 
 ```
 document.addEventListener('DOMContentLoaded', function() {
@@ -178,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-Added request animation frame to on scroll event.
+Added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener.
 
 ```
 window.addEventListener('scroll', function() {
@@ -188,7 +190,7 @@ window.addEventListener('scroll', function() {
 
 ###Resized Pizzas
 
-Moved the determineDx function out of loop. Selected only the first .randomPizzaContainer in the document.
+Moved the determineDx function call inside the changePizzaSizes function out of the loop. Selected only the first .randomPizzaContainer in the document.
 
 ```
 function changePizzaSizes(size) {
@@ -200,7 +202,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-Moved the newwidth calculation out of loop. Again, selected only the first .randomPizzaContainer element in the document.
+Moved the newwidth calculation inside the changePizzaSizes function out of the loop. Again, selected only the first .randomPizzaContainer element in the document.
 
 ```
 function changePizzaSizes(size) {
@@ -212,7 +214,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-Create a new variable to hold all of the .randomPizzaContainer elements in the document. Loop through them.
+Create a new variable to hold all of the .randomPizzaContainer elements in the document. Loop through the elements and apply the new width value.
 
 ```
 function changePizzaSizes(size) {
@@ -225,7 +227,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-Optimized loop to a reduce checks by iterating backwards through the elements.
+Optimized loop inside the changePizzaSizes function.
 
 ```
 function changePizzaSizes(size) {
@@ -372,6 +374,12 @@ function changePizzaSizes(size) {
 #####CSS Transform
 
 - [CSS Tricks - Transform](http://css-tricks.com/almanac/properties/t/transform/)
+- [Treehouse: Increase Your Site’s Performance with Hardware-Accelerated CSS](http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css)
+- [Force Hardware Acceleration in WebKit with translate3d](http://davidwalsh.name/translate3d) By David Walsh
+
+#####Animations
+
+- [HTML5 Rocks: High Performance Animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) By Paul Lewis and Paul Irish
 
 #####requestAnimationFrame
 
@@ -386,3 +394,7 @@ function changePizzaSizes(size) {
 #####Chrome Office Hours
 
 - [[VIDEO] Paul Lewis & Paul Irish investigate rendering problems](https://www.youtube.com/watch?v=z0_jD8nO5Zw)
+
+#####Udacity Office Hours
+
+- [Office Hours: P3 and P4, Strategies for Web Optimization](https://plus.google.com/events/cjk2bief153ofdink5eln6nv8f8)
