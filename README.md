@@ -6,7 +6,7 @@
 
 ####FPS Before any fixes
 
-![image](mikejoyceio.github.com/website-optimization/readme_images/breakdown-01.png)
+![image](readme_images/breakdown-01.png)
 
 ##Resources
 
