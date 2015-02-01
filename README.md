@@ -39,7 +39,7 @@ More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/
 
 ###Sliding Pizzas
 
-I read through the code in pizza.js (originally main.js) to try and understand how the code functions. I then console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+I read through the code in main.js (which I renamed to pizza.js) to try and understand how the code functions. I then console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
