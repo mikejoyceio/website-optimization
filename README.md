@@ -46,6 +46,7 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
+```
 
 ```
 document.addEventListener('DOMContentLoaded', function() {
@@ -84,7 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
   updatePositions();
 });
 ``` 
+
 Applied transform and force GPU hardware acceleration to items within updatePositions function.
+
 
 ```
 function updatePositions() {
