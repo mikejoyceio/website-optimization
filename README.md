@@ -16,6 +16,32 @@ Contains the production ready CSS, JS and images built from the app/ directory.
 
 Contains the HTML for the pizza and individual project pages.
 
+##The Optimization Process
+
+First of all, I read through the code in pizza.js (renamed main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+
+`var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
+
+I then did some research on switch statements vs. if/else blocks. After reading a few different discussions the consensus is that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate.
+
+Research loop optimisation. Found thread on StackOverflow. Adjusted loop contained in the updatePositions and onDOMContentLoaded function.
+
+Moved onto the function that generates the sliding pizzas on dom load. Reduced the amount of sliding pizza elements the for loop generates from 200 down to 31, which sufficiently fills the screen with sliding pizzas. 
+
+Console logged through the DOMContentLoaded function.
+
+Researched how to apply a CSS3 transform to an element with vanilla JS.
+
+Applied transform and force GPU hardware acceleration to items within updatePositions function.
+
+Move the scrollTop / 1250 outside of the loop
+
+Remove height and width styles from pizza elements generated in the DOMContentLoaded function. Resize pizza image and name pizza-slider.png.
+
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+
+Added request animation frame to on scroll event.
 
 ##Optimization Breakdown (tl;dr)
 
