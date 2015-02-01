@@ -16,6 +16,23 @@ Contains the production ready CSS, JS and images built from the app/ directory.
 
 Contains the HTML for the pizza and individual project pages.
 
+##The Build
+
+I decided to use the [Brunch](http://brunch.io) build tool for this project.
+
+######
+
+Install Brunch
+
+`npm install -g brunch`
+
+Build
+
+`brunch build --production`
+
+More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/docs).
+
+
 ##The Optimization Process
 
 ###Sliding Pizzas
