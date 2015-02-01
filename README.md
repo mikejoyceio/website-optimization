@@ -1,6 +1,8 @@
 #P04 - Website Optimization
 
-Live website: http://optimization.mikejoyce.io
+Website: http://optimization.mikejoyce.io
+
+Google PageSpeed Score: https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io
 
 ##File Structure
 
@@ -33,7 +35,7 @@ Build
 More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 
-##The Optimization Process
+##The Optimization
 
 ###Sliding Pizzas
 
