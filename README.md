@@ -18,30 +18,151 @@ Contains the HTML for the pizza and individual project pages.
 
 ##The Optimization Process
 
-First of all, I read through the code in pizza.js (renamed main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+Read through the code in pizza.js (originally main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
-I then did some research on switch statements vs. if/else blocks. After reading a few different discussions the consensus is that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate.
+Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
 
-Research loop optimisation. Found thread on StackOverflow. Adjusted loop contained in the updatePositions and onDOMContentLoaded function.
+Looked into loop optimisation and ended up changing up the loops contained in the updatePositions and onDOMContentLoaded event handler.
 
-Moved onto the function that generates the sliding pizzas on dom load. Reduced the amount of sliding pizza elements the for loop generates from 200 down to 31, which sufficiently fills the screen with sliding pizzas. 
+```
+function updatePositions() {
+  frame++;
+  window.performance.mark("mark_start_frame");
 
-Console logged through the DOMContentLoaded function.
+  var items = document.querySelectorAll('.mover');
+  for (var i = items.length; i--;) {
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  }
 
-Researched how to apply a CSS3 transform to an element with vanilla JS.
+  // User Timing API to the rescue again. Seriously, it's worth learning.
+  // Super easy to create custom metrics.
+  window.performance.mark("mark_end_frame");
+  window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
+  if (frame % 10 === 0) {
+    var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
+    logAverageFrame(timesToUpdatePosition);
+  }
+}
 
+```
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  for (var i = 200; i--;) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    elem.src = "../public/img/pizza.png";
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
+```
+
+Moved onto the DOMContentLoad handler which fires a function to generate the sliding pizzas and reduced the amount of sliding pizza elements the for loop generates from 200 down to 31, which sufficiently fills the screen with sliding pizzas.
+
+```
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  for (var i = 31; i--;) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    elem.src = "../public/img/pizza.png";
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
+``` 
 Applied transform and force GPU hardware acceleration to items within updatePositions function.
+
+```
+function updatePositions() {
+  frame++;
+  window.performance.mark("mark_start_frame");
+
+  var items = document.querySelectorAll('.mover');
+  for (var i = items.length; i--;) {
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    var left = -items[i].basicLeft + 1000 * phase + 'px';
+ 		items[i].style.transform = "translateX("+left+") translateZ(0)";
+  }
+
+  // User Timing API to the rescue again. Seriously, it's worth learning.
+  // Super easy to create custom metrics.
+  window.performance.mark("mark_end_frame");
+  window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
+  if (frame % 10 === 0) {
+    var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
+    logAverageFrame(timesToUpdatePosition);
+  }
+}
+```
 
 Move the scrollTop / 1250 outside of the loop
 
+```
+function updatePositions() {
+  frame++;
+  window.performance.mark("mark_start_frame");
+
+  var items = document.querySelectorAll('.mover');
+  var top = (document.body.scrollTop / 1250);
+  
+  for (var i = items.length; i--;) {
+    var phase = Math.sin( top + (i % 5));
+    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    var left = -items[i].basicLeft + 1000 * phase + 'px';
+ 		items[i].style.transform = "translateX("+left+") translateZ(0)";
+  }
+
+  // User Timing API to the rescue again. Seriously, it's worth learning.
+  // Super easy to create custom metrics.
+  window.performance.mark("mark_end_frame");
+  window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
+  if (frame % 10 === 0) {
+    var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
+    logAverageFrame(timesToUpdatePosition);
+  }
+}
+```
+
 Remove height and width styles from pizza elements generated in the DOMContentLoaded function. Resize pizza image and name pizza-slider.png.
 
-    elem.style.height = "100px";
-    elem.style.width = "73.333px";
+```
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  for (var i = 31; i--;) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    elem.src = "../public/img/pizza-slider.png";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
+```
 
 Added request animation frame to on scroll event.
+
+```
+window.addEventListener('scroll', function() {
+	window.requestAnimationFrame(updatePositions);
+});
+```
 
 ##Optimization Breakdown (tl;dr)
 
