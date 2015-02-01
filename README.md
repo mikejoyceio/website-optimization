@@ -8,7 +8,7 @@ Live website: http://optimization.mikejoyce.io
 
 Contains development CSS, JS and images, sorted into corresponding directories.
 
-######app/public/
+######public/
 
 Contains the production ready CSS, JS and images built from the app/ directory.
 
@@ -18,7 +18,7 @@ Contains the HTML for the pizza and individual project pages.
 
 ##The Build
 
-I decided to use the [Brunch](http://brunch.io) build tool for this project.
+I used the [Brunch](http://brunch.io) build tool for this project.
 
 ######
 
@@ -226,6 +226,9 @@ window.addEventListener('scroll', function() {
 
 ###Resized Pizzas
 
+######Resize time before fixes
+
+![Breakdown Image 09](readme_images/breakdown-09.png)
 
 ##Resources
 
