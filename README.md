@@ -1,9 +1,18 @@
 #P04 - Website Optimization
 
+##File Structure
+
+##Optimization Breakdown (tl;dr)
+
+####FPS Before any fixes
+
+![image](mikejoyceio.github.com/website-optimization/readme_images/breakdown-01.png)
+
 ##Resources
 
 
 ###Index Page
+
 
 #####Critical Fold CSS
 
@@ -46,7 +55,7 @@
 
 #####GZIP Compression
 
-- [Enable GZIP compression in WHM / cPanel with EasyApache](http://myhosting.com/kb/index.php?action=showEntry&data=4906)A
+- [Enable GZIP compression in WHM / cPanel with EasyApache](http://myhosting.com/kb/index.php?action=showEntry&data=4906)
 - [Enable Apache Gzip Compression (mod_deflate) Globally in WHM/cPanel](http://tecadmin.net/enable-apache-gzip-compression-globally-in-whm-cpanel/)
 - [How to check if mod_delate in enabled](http://stackoverflow.com/questions/970151/how-to-check-mod-deflate-is-enabled-in-apache)
 - [Check GZIP Compression](http://checkgzipcompression.com/)
@@ -56,8 +65,8 @@
 - [Google Developers: Cache Control](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
 
 
-
 ###Pizza Page
+
 
 #####Layout & Rendering
 
@@ -84,7 +93,7 @@
 
 - [Fixing a parallax scrolling website to run in 60 FPS](http://kristerkari.github.io/adventures-in-webkit-land/blog/2013/08/30/fixing-a-parallax-scrolling-website-to-run-in-60-fps/) By Krister Kari
 
-#####Devtools
+#####Chrome Devtools
 
 - [Cheatsheet](http://anti-code.com/devtools-cheatsheet/)
 - [Performance profiling with the Timeline](https://developer.chrome.com/devtools/docs/timeline)
