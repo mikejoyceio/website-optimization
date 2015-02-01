@@ -32,7 +32,7 @@
 
 ![Breakdown Image 07](readme_images/breakdown-07.png)
 
-######After including the window.reaquestAnimationFrame method
+######After including window.requestAnimationFrame method within scroll event handler
 
 ![Breakdown Image 08](readme_images/breakdown-08.png)
 
