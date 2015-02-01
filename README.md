@@ -33,7 +33,7 @@ Build
 More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 
-##The Optimization Process
+##The Optimization
 
 ###Sliding Pizzas
 
