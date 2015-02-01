@@ -12,7 +12,7 @@
 
 ![Breakdown Image 02](readme_images/breakdown-02.png)
 
-######After optimizing loops within the the updatePositions() function and DOMContentLoaded event handler
+######After optimizing loops 
 
 ![Breakdown Image 03](readme_images/breakdown-03.png)
 
@@ -20,19 +20,19 @@
 
 ![Breakdown Image 04](readme_images/breakdown-04.png)
 
-######After applying translateX() and translateZ(0) transform functions to the sliding pizza elements in the updatePositions() function
+######After applying translateX() and translateZ(0) transform functions to the sliding pizza elements
 
 ![Breakdown Image 05](readme_images/breakdown-05.png)
 
-######After moving the calculation utlizing the scrollTop property outside of the loop contained in the updatePositions() function
+######After moving a calculation utlizing the scrollTop property outside of a loop
 
 ![Breakdown Image 06](readme_images/breakdown-06.png)
 
-######After removing the height and width styles applied to the sliding pizza elements within DOMContentLoaded event handler and resizing the sliding pizza image
+######After removing height & width styles applied to the pizza image tag and resizing the pizza image
 
 ![Breakdown Image 07](readme_images/breakdown-07.png)
 
-######After adding the updatePositions() function as a parameter to the window.reaquestAnimationFrame method contained in the scroll event handler
+######After including the window.reaquestAnimationFrame method in the on scroll event handler
 
 ![Breakdown Image 08](readme_images/breakdown-08.png)
 
