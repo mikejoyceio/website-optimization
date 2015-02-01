@@ -450,9 +450,16 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+  	// Select the first .randomPizzaContainer in the DOM and pass it as a 
+  	// parameter to the determinDx function
   	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+  	// Select the first .randomPizzaContainer in the DOM and grab the layout width
+  	// of the element
     var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+    // Select all of the .randomPizzaContainer elements in the DOM
     var elements = document.querySelectorAll(".randomPizzaContainer");
+    // Loop throught all the .randomPizzaContainer elements in the DOM
+    // and appy a new width value
     for (var i = elements.length; i--;) {
       elements[i].style.width = newwidth;
     }
@@ -506,6 +513,7 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   var top = (document.body.scrollTop / 1250);
 
+  // Loop in reverse to improve performance
   for (var i = items.length; i--;) {
     var phase = Math.sin( top + (i % 5));
     //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -525,6 +533,8 @@ function updatePositions() {
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', function() {
+	// Add the updatePositions function as a parameter to the rAF method. 
+	// Optimizes concurrent animations into a single reflow an repaint cycle.
 	window.requestAnimationFrame(updatePositions);
 });
 
@@ -532,6 +542,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  // Loop in reverse to improve performance
   for (var i = 31; i--;) {
     var elem = document.createElement('img');
     elem.className = 'mover';
