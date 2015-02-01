@@ -364,7 +364,7 @@ function changePizzaSizes(size) {
 - [Writing efficient JavaScript](http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html)
 - [O'Reilly JavaScript - The Definitive Guide - Switch](http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html)
 
-######JavaScript DOM Traversal
+#####JavaScript DOM Traversal
 
 - [Mozilla Developer Network: document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/document.querySelector)
 - [Mozilla Developer Network: document.querySelectorAll](https://developer.mozilla.org/en/docs/Web/API/Document.querySelectorAll)
