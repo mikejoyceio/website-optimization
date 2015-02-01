@@ -18,6 +18,8 @@ Contains the HTML for the pizza and individual project pages.
 
 ##The Optimization Process
 
+###Sliding Pizzas
+
 Read through the code in pizza.js (originally main.js) to try and understand how the code functions. I then console logged my way from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
@@ -167,7 +169,11 @@ window.addEventListener('scroll', function() {
 });
 ```
 
+###Resized Pizzas
+
 ##Optimization Breakdown (tl;dr)
+
+###Sliding Pizzas
 
 ######FPS Before any fixes
 
@@ -200,6 +206,8 @@ window.addEventListener('scroll', function() {
 ######After including window.requestAnimationFrame method within scroll event handler
 
 ![Breakdown Image 08](readme_images/breakdown-08.png)
+
+###Resized Pizzas
 
 
 ##Resources
