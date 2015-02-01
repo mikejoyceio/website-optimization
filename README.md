@@ -400,4 +400,4 @@ function changePizzaSizes(size) {
 
 #####Udacity Office Hours
 
-- [Office Hours: P3 and P4, Strategies for Web Optimization](https://plus.google.com/events/cjk2bief153ofdink5eln6nv8f8)
+- [[VIDEO] Office Hours: P3 and P4, Strategies for Web Optimization](https://plus.google.com/events/cjk2bief153ofdink5eln6nv8f8)
