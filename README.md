@@ -344,6 +344,7 @@ function changePizzaSizes(size) {
 #####HTTP Caching
 
 - [Google Developers: Cache Control](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+- [5 .htaccess Snippets to Borrow from HTML5 Boilerplate](http://davidwalsh.name/html5-boilerplate-htaccess) By David Walsh
 
 
 ###Pizza Page
