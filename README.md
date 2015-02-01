@@ -1,6 +1,21 @@
 #P04 - Website Optimization
 
+Live website: http://optimization.mikejoyce.io
+
 ##File Structure
+
+######app/
+
+Contains development CSS, JS and images, sorted into corresponding directories.
+
+######app/public/
+
+Contains the production ready CSS, JS and images built from the app/ directory.
+
+######views/
+
+Contains the HTML for the pizza and individual project pages.
+
 
 ##Optimization Breakdown (tl;dr)
 
