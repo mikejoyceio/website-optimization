@@ -4,35 +4,35 @@
 
 ##Optimization Breakdown (tl;dr)
 
-####FPS Before any fixes
+######FPS Before any fixes
 
 ![Breakdown Image 01](readme_images/breakdown-01.png)
 
-####After fixing misspelled adjective array value
+######After fixing misspelled adjective array value
 
 ![Breakdown Image 02](readme_images/breakdown-02.png)
 
-####After optimizing loops within the the updatePositions() function and DOMContentLoaded event handler
+######After optimizing loops within the the updatePositions() function and DOMContentLoaded event handler
 
 ![Breakdown Image 03](readme_images/breakdown-03.png)
 
-####After reducing the number of sliding pizzas generated from 200 to 31
+######After reducing the number of sliding pizzas generated from 200 to 31
 
 ![Breakdown Image 04](readme_images/breakdown-04.png)
 
-####After applying translateX() and translateZ(0) transform functions to the sliding pizza elements in the updatePositions() function
+######After applying translateX() and translateZ(0) transform functions to the sliding pizza elements in the updatePositions() function
 
 ![Breakdown Image 05](readme_images/breakdown-05.png)
 
-####After moving the calculation utlizing the scrollTop property outside of the loop contained in the updatePositions() function
+######After moving the calculation utlizing the scrollTop property outside of the loop contained in the updatePositions() function
 
 ![Breakdown Image 06](readme_images/breakdown-06.png)
 
-####After removing the height and width styles applied to the sliding pizza elements within DOMContentLoaded event handler and resizing the sliding pizza image
+######After removing the height and width styles applied to the sliding pizza elements within DOMContentLoaded event handler and resizing the sliding pizza image
 
 ![Breakdown Image 07](readme_images/breakdown-07.png)
 
-####After adding the updatePositions() function as a parameter to the window.reaquestAnimationFrame method contained in the scroll event handler
+######After adding the updatePositions() function as a parameter to the window.reaquestAnimationFrame method contained in the scroll event handler
 
 ![Breakdown Image 08](readme_images/breakdown-08.png)
 
