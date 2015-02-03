@@ -69,11 +69,11 @@ Leveraged [browser caching](https://developers.google.com/speed/docs/insights/Le
 
 The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
 
-- Console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+Console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
-- Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
+Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
 ```
 function updatePositions() {
