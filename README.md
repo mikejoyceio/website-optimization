@@ -37,13 +37,27 @@ More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/
 
 ##The Optimization
 
+###Index Page
+
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. I made the following changes to reach a score of 99/100 for both mobile and desktop:
+
+######CSS
+
+######JS
+
+######Images
+
+######GZIP
+
+######HTTP Headers
+
 ###Sliding Pizzas
 
 I read through the code in main.js (which I renamed to pizza.js) to try and understand how the code functions. I then console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
-Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
+Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through answers to questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
 
 I then made the following changes to the code:
 
@@ -209,20 +223,20 @@ Moved the newwidth calculation inside the changePizzaSizes function out of the l
 ```
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
-  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
   for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
     document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
   }
 }
 ```
 
-Create a new variable to hold all of the .randomPizzaContainer elements in the document. Loop through the elements and apply the new width value.
+Created a new variable to hold all of the .randomPizzaContainer elements in the document and looped through the elements to apply the new width value.
 
 ```
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
-  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
-  var elements = document.querySelectorAll(".randomPizzaContainer");
+	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+	var elements = document.querySelectorAll(".randomPizzaContainer");
   for (var i = 0; i < elements.length; i++) {
     elements[i].style.width = newwidth;
   }
@@ -234,8 +248,8 @@ Optimized loop inside the changePizzaSizes function.
 ```
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
-  var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
-  var elements = document.querySelectorAll(".randomPizzaContainer");
+	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+	var elements = document.querySelectorAll(".randomPizzaContainer");
   for (var i = elements.length; i--;) {
     elements[i].style.width = newwidth;
   }
@@ -246,49 +260,59 @@ function changePizzaSizes(size) {
 
 ##Optimization Breakdown (tl;dr)
 
+###Index Page
+
+######PageSpeed Score before any fixes
+
+![Breakdown Image 11](readme_images/breakdown-01.png)
+
+######PageSpeed Score after fixes
+
+![Breakdown Image 12](readme_images/breakdown-02.png)
+
 ###Sliding Pizzas
 
 ######FPS Before any fixes
 
-![Breakdown Image 01](readme_images/breakdown-01.png)
+![Breakdown Image 01](readme_images/breakdown-03.png)
 
 ######After fixing misspelled adjective array value
 
-![Breakdown Image 02](readme_images/breakdown-02.png)
+![Breakdown Image 02](readme_images/breakdown-04.png)
 
 ######After optimizing loops 
 
-![Breakdown Image 03](readme_images/breakdown-03.png)
+![Breakdown Image 03](readme_images/breakdown-05.png)
 
 ######After reducing the number of sliding pizzas generated from 200 to 31
 
-![Breakdown Image 04](readme_images/breakdown-04.png)
+![Breakdown Image 04](readme_images/breakdown-06.png)
 
 ######After applying translateX() and translateZ(0) transform functions to the sliding pizza elements
 
-![Breakdown Image 05](readme_images/breakdown-05.png)
+![Breakdown Image 05](readme_images/breakdown-07.png)
 
 ######After moving a calculation utlizing the scrollTop property outside of a loop
 
-![Breakdown Image 06](readme_images/breakdown-06.png)
+![Breakdown Image 06](readme_images/breakdown-08.png)
 
 ######After removing height & width styles from pizza image tag and resizing the image
 
-![Breakdown Image 07](readme_images/breakdown-07.png)
+![Breakdown Image 07](readme_images/breakdown-09.png)
 
 ######After including window.requestAnimationFrame method within scroll event handler
 
-![Breakdown Image 08](readme_images/breakdown-08.png)
+![Breakdown Image 08](readme_images/breakdown-10.png)
 
 ###Resized Pizzas
 
 ######Resize time before fixes
 
-![Breakdown Image 09](readme_images/breakdown-09.png)
+![Breakdown Image 09](readme_images/breakdown-11.png)
 
 ######Resize time after fixes
 
-![Breakdown Image 10](readme_images/breakdown-10.png)
+![Breakdown Image 10](readme_images/breakdown-12.png)
 
 
 ##Resources
