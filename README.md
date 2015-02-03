@@ -69,7 +69,7 @@ Leveraged [browser caching](https://developers.google.com/speed/docs/insights/Le
 
 The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
 
-Console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array literal to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
@@ -290,7 +290,7 @@ function changePizzaSizes(size) {
 
 ![Breakdown Image 01](readme_images/breakdown-03.png)
 
-######After fixing misspelled adjective array value
+######After fixing mis-named adjectives array literal value
 
 ![Breakdown Image 02](readme_images/breakdown-04.png)
 
