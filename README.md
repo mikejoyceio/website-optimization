@@ -71,11 +71,11 @@ The following changes where made to fix the low FPS and produce a consistent 60F
 
 Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
-`var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
+`js var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
 Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
-```
+```js
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
