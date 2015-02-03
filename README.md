@@ -20,7 +20,7 @@ Contains the HTML for the pizza and individual project pages.
 
 ##Build
 
-The [Brunch](http://brunch.io) HTML5 build tool built the files in this project.
+The [Brunch](http://brunch.io) HTML5 build tool was used to concatenate and minify scripts and style sheets.
 
 ######Install Brunch
 
