@@ -71,7 +71,9 @@ The following changes where made to fix the low FPS and produce a consistent 60F
 
 Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
-`js var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
+```js 
+var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
+```
 
 Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
@@ -97,7 +99,7 @@ function updatePositions() {
 }
 ```
 
-```
+```js
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
@@ -117,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Reduced the amount of sliding pizza elements generated from 200 down to 31, which still sufficiently fills the screen with sliding pizzas.
 
-```
+```js
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
@@ -138,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function. 
 
 
-```
+```js
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -164,7 +166,7 @@ function updatePositions() {
 
 Moved the calculation which utilizes the scrollTop method outside of the loop.
 
-```
+```js
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -192,7 +194,7 @@ function updatePositions() {
 
 Removed height and width styles from the generated pizza elements and resized the pizza image to 100 x 100 to prevent the browser from having to resize the images.
 
-```
+```js
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
@@ -210,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener.
 
-```
+```js
 window.addEventListener('scroll', function() {
 	window.requestAnimationFrame(updatePositions);
 });
@@ -222,7 +224,7 @@ The following changes were made to resize the pizzas in under 5ms:
 
 Moved the determineDx function call inside the changePizzaSizes function out of the loop. Selected only the first .randomPizzaContainer in the document.
 
-```
+```js
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
   for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
@@ -234,7 +236,7 @@ function changePizzaSizes(size) {
 
 Moved the newwidth calculation inside the changePizzaSizes function out of the loop. Again, selected only the first .randomPizzaContainer element in the document.
 
-```
+```js
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
 	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
@@ -246,7 +248,7 @@ function changePizzaSizes(size) {
 
 Created a new variable to hold all of the .randomPizzaContainer elements in the document and looped through the elements to apply the new width value.
 
-```
+```js
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
 	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
@@ -259,7 +261,7 @@ function changePizzaSizes(size) {
 
 Optimized loop inside the changePizzaSizes function.
 
-```
+```js
 function changePizzaSizes(size) {
 	var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
 	var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
