@@ -55,7 +55,7 @@ Resized images that were too large and compressed all images with the [Kraken](h
 
 ######Gzip compression
 
-Enabled the [mod_deflate (gzip)] Apache module(http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) on the server.
+Enabled the [mod_deflate](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html)(gzip) Apache module on the server.
 
 ######Browser Caching
 
