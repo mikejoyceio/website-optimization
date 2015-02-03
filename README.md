@@ -22,10 +22,6 @@ Contains the HTML for the pizza and individual project pages.
 
 The HTML5 build tool [Brunch](http://brunch.io) builds the files in this project.
 
-Basic usage: 
-
-######
-
 ######Install Brunch
 
 `npm install -g brunch`
