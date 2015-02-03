@@ -39,17 +39,27 @@ More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/
 
 ###Index Page
 
-The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. I made the following changes to reach a score of 99/100 for both mobile and desktop:
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. I made the following changes to achieve a score of 99/100 for both mobile and desktop:
 
 ######CSS
 
+[Inlined](https://developers.google.com/speed/pagespeed/module/filter-css-inline) all of the CSS into the head of the document and added the media="print" attribute to the external style sheet for print styles.
+
 ######JS
+
+Added the [HTML async attribute](https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts) to all script tags. Used the [Brunch](http://brunch.io/) build tool to concatenate and minify.
 
 ######Images
 
-######GZIP
+Resized images that were too large and compressed all images with the [Kraken](https://kraken.io/web-interface) image compression tool.
 
-######HTTP Headers
+######Gzip compression
+
+Enabled the [mod_deflate (gzip) Apache module](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) on the server.
+
+######Browser Caching
+
+[Leveraged browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by add an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file to the root of the website. The file contains expires headers, which sets expiration times for all CSS, JavaScript and images.
 
 ###Sliding Pizzas
 
@@ -262,11 +272,11 @@ function changePizzaSizes(size) {
 
 ###Index Page
 
-######PageSpeed Score before any fixes
+######Google PageSpeed Score before any fixes
 
 ![Breakdown Image 11](readme_images/breakdown-01.png)
 
-######PageSpeed Score after fixes
+######Google PageSpeed Score after fixes
 
 ![Breakdown Image 12](readme_images/breakdown-02.png)
 
