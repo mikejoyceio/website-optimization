@@ -39,7 +39,7 @@ More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/
 
 ###Index Page
 
-The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. I made the following changes to achieve a score of 99/100 for both mobile and desktop:
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. The following changes were made to achieve a score of 99/100 for both mobile and desktop:
 
 ######CSS
 
@@ -47,7 +47,7 @@ The index page originally had a Google PageSpeed score of 35/100 for mobile and 
 
 ######JS
 
-Added the [HTML async attribute](https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts) to all script tags. Used the [Brunch](http://brunch.io/) build tool to concatenate and minify.
+Added the [HTML async attribute](https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts) to all script tags and used the [Brunch](http://brunch.io/) build tool to concatenate and minify.
 
 ######Images
 
@@ -55,11 +55,11 @@ Resized images that were too large and compressed all images with the [Kraken](h
 
 ######Gzip compression
 
-Enabled the [mod_deflate (gzip) Apache module](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) on the server.
+Enabled the [mod_deflate (gzip)] Apache module(http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) on the server.
 
 ######Browser Caching
 
-[Leveraged browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by add an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file to the root of the website. The file contains expires headers, which sets expiration times for all CSS, JavaScript and images.
+Leveraged [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by including an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file in the root of the website. The file contains expires headers, which sets expiration times for all CSS, JavaScript and images.
 
 ###Sliding Pizzas
 
