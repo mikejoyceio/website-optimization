@@ -20,13 +20,19 @@ Contains the HTML for the pizza and individual project pages.
 
 ##Build
 
-I used the [Brunch](http://brunch.io) build tool for this project.
+The HTML5 build tool [Brunch](http://brunch.io) builds the files in this project.
+
+Basic usage: 
 
 ######
 
 ######Install Brunch
 
 `npm install -g brunch`
+
+######Develop
+
+`brunch watch --server`
 
 ######Build
 
@@ -39,7 +45,9 @@ More detailed documentation can be found [here](https://github.com/brunch/brunch
 
 ###Index Page
 
-The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. The following changes were made to achieve a score of 99/100 for both mobile and desktop:
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. After making changes the score increased t0 99/100 for both mobile and desktop. Interestingly enough, the only thing that is preventing a score of 100/100 is the google's own analytics script.
+
+The following changes were made:
 
 ######CSS
 
