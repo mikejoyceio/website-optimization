@@ -1,6 +1,8 @@
 #P04 - Website Optimization
 
-Website: http://optimization.mikejoyce.io
+##Website
+
+###http://optimization.mikejoyce.io
 
 ##File Structure
 
@@ -16,7 +18,7 @@ Contains the production ready CSS, JS and images built from the app/ directory.
 
 Contains the HTML for the pizza and individual project pages.
 
-##The Build
+##Build
 
 The [Brunch](http://brunch.io) build tool was used for this project.
 
@@ -33,7 +35,7 @@ The [Brunch](http://brunch.io) build tool was used for this project.
 More detailed documentation can found [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 
-##The Optimization
+##Optimization
 
 ###Index Page
 
