@@ -20,7 +20,7 @@ Contains the HTML for the pizza and individual project pages.
 
 ##Build
 
-The [Brunch](http://brunch.io) build tool was used for this project.
+I used the [Brunch](http://brunch.io) build tool for this project.
 
 ######
 
