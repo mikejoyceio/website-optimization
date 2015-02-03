@@ -32,7 +32,7 @@ The [Brunch](http://brunch.io) build tool was used for this project.
 
 `brunch build --production`
 
-More detailed documentation can found [here](https://github.com/brunch/brunch/tree/stable/docs).
+More detailed documentation can be found [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 
 ##Optimization
@@ -55,11 +55,11 @@ Resized images that were too large and compressed all images with the [Kraken](h
 
 ######Gzip compression
 
-Enabled the [mod_deflate](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html)(gzip) Apache module on the server.
+Enabled the [mod_deflate](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) (gzip) Apache module on the server.
 
 ######Browser Caching
 
-Leveraged [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by including an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file in the root of the website. The file contains expires headers, which sets expiration times for all CSS, JavaScript and images.
+Leveraged [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by including an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file in the root of the website. The file contains expires headers, which sets long expiration times for all CSS, JavaScript and images.
 
 ###Sliding Pizzas
 
@@ -276,11 +276,9 @@ function changePizzaSizes(size) {
 
 ![Breakdown Image 11](readme_images/breakdown-01.png)
 
-######Google PageSpeed Score after fixes
+######Google [PageSpeed Score](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io) after fixes
 
 ![Breakdown Image 12](readme_images/breakdown-02.png)
-
-[Google PageSpeed Insights Result](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io)
 
 ###Sliding Pizzas
 
