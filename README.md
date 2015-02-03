@@ -41,7 +41,7 @@ More detailed documentation can be found [here](https://github.com/brunch/brunch
 
 ###Index Page
 
-The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. After making changes the score increased t0 99/100 for both mobile and desktop. Interestingly enough, the only thing that is preventing a score of 100/100 is the google's own analytics script.
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. After making changes the score increased to 99/100 for both mobile and desktop. Interestingly enough, the only thing that is preventing a score of 100/100 is Google's own analytics script.
 
 The following changes were made:
 
@@ -73,7 +73,7 @@ I read through the code in main.js (which I renamed to pizza.js) to try and unde
 
 Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through answers to questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
 
-I then made the following changes to the code:
+The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
 
 Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
@@ -219,6 +219,8 @@ window.addEventListener('scroll', function() {
 ```
 
 ###Resized Pizzas
+
+The following changes were made to resize the pizzas in under 5ms:
 
 Moved the determineDx function call inside the changePizzaSizes function out of the loop. Selected only the first .randomPizzaContainer in the document.
 
