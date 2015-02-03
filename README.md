@@ -32,7 +32,7 @@ The [Brunch](http://brunch.io) build tool was used for this project.
 
 `brunch build --production`
 
-More detailed documentation [here](https://github.com/brunch/brunch/tree/stable/docs).
+More detailed documentation can found [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 
 ##The Optimization
