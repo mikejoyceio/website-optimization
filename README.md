@@ -43,7 +43,7 @@ The index page originally had a Google PageSpeed score of 35/100 for mobile and 
 
 ######CSS
 
-[Inlined](https://developers.google.com/speed/pagespeed/module/filter-css-inline) all of the CSS into the head of the document and added the media="print" attribute to the external style sheet for print styles.
+[Inlined](https://developers.google.com/speed/pagespeed/module/filter-css-inline) all of the CSS into the head of the document and added the HTML [https://developer.mozilla.org/de/docs/Web/HTML/Element/link) attribute to the external style sheet link for print styles.
 
 ######JS
 
