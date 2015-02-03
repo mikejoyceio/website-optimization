@@ -67,15 +67,13 @@ Leveraged [browser caching](https://developers.google.com/speed/docs/insights/Le
 
 ###Sliding Pizzas
 
-I read through the code in main.js (which I renamed to pizza.js) to try and understand how the code functions. I then console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
+The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
+
+- Console logged starting from the randomName function up into the generator function and through this identified that the global literal adjectives array contains the value ‘noise’, but the getAdj function contains the switch case ‘noisy’. I renamed the value in the global adjectives array to ‘noisy’ and checked to make sure that both the adjectives/nouns array literals matched the cases within the getAdj and getNoun functions.
 
 `var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 
-Did a little research on switch statements vs. if/else blocks out of curiosity. After reading through answers to questions on StackOverflow and a few blog posts the consensus seems to be that a switch statement is preferable if there are more than 2 or 3 conditions to evaluate, so I left the getAdj and getNoun functions as they are.
-
-The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
-
-Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
+- Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
 ```
 function updatePositions() {
