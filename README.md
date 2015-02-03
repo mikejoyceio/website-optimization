@@ -41,7 +41,7 @@ More detailed documentation can be found [here](https://github.com/brunch/brunch
 
 ###Index Page
 
-The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. After making changes the score increased to 99/100 for both mobile and desktop. Interestingly enough, the only thing that is preventing a score of 100/100 is Google's own analytics script.
+The index page originally had a Google PageSpeed score of 35/100 for mobile and 47/100 for desktop. After making changes the score increased to [99/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io) for both mobile and desktop. Interestingly enough, the only thing that is preventing a score of 100/100 is Google's own analytics script.
 
 The following changes were made:
 
@@ -283,8 +283,6 @@ function changePizzaSizes(size) {
 ######Google PageSpeed Score after fixes
 
 ![Breakdown Image 12](readme_images/breakdown-02.png)
-
-######[Google PageSpeed Result](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io)
 
 ###Sliding Pizzas
 
