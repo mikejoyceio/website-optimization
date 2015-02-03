@@ -2,8 +2,6 @@
 
 Website: http://optimization.mikejoyce.io
 
-[Google PageSpeed Insights Score](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io)
-
 ##File Structure
 
 ######app/
@@ -279,6 +277,8 @@ function changePizzaSizes(size) {
 ######Google PageSpeed Score after fixes
 
 ![Breakdown Image 12](readme_images/breakdown-02.png)
+
+[Google PageSpeed Insights Result](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io)
 
 ###Sliding Pizzas
 
