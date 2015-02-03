@@ -280,9 +280,11 @@ function changePizzaSizes(size) {
 
 ![Breakdown Image 11](readme_images/breakdown-01.png)
 
-######Google [PageSpeed Score](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io) after fixes
+######Google PageSpeed Score after fixes
 
 ![Breakdown Image 12](readme_images/breakdown-02.png)
+
+[Google PageSpeed Result](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Foptimization.mikejoyce.io)
 
 ###Sliding Pizzas
 
