@@ -1,7 +1,5 @@
 #Website Optimization
 
-##Website
-
 ###http://optimization.mikejoyce.io
 
 ##File Structure
