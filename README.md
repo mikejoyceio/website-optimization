@@ -334,7 +334,7 @@ function changePizzaSizes(size) {
 ##Resources
 
 
-###Index Page
+####Index Page
 
 
 ######Critical Fold CSS
@@ -389,7 +389,7 @@ function changePizzaSizes(size) {
 - [5 .htaccess Snippets to Borrow from HTML5 Boilerplate](http://davidwalsh.name/html5-boilerplate-htaccess) By David Walsh
 
 
-###Pizza Page
+####Pizza Page
 
 
 ######Layout & Rendering
