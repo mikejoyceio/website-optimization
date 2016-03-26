@@ -241,6 +241,8 @@ window.addEventListener('scroll', function() {
 
 The following changes were made to resize the pizzas in under 5ms:
 
+######Improved Efficiency
+
 Moved the determineDx function call inside the changePizzaSizes function out of the loop. Selected only the first .randomPizzaContainer in the document.
 
 ```js
@@ -278,6 +280,8 @@ function changePizzaSizes(size) {
 }
 ```
 
+######Optimized Loops
+
 Optimized loop inside the changePizzaSizes function.
 
 ```js
@@ -290,8 +294,6 @@ function changePizzaSizes(size) {
   }
 }
 ```
-
-
 
 ##Optimization Breakdown (tl;dr)
 
