@@ -74,11 +74,15 @@ Leveraged [browser caching](https://developers.google.com/speed/docs/insights/Le
 
 The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
 
+######Fixed Typo
+
 Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
 ```js
 var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 ```
+
+######Optimized Loops
 
 Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
@@ -122,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
+######Reduced Pizza Elements
+
 Reduced the amount of sliding pizza elements generated from 200 down to 31, which still sufficiently fills the screen with sliding pizzas.
 
 ```js
@@ -141,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
   updatePositions();
 });
 ```
+
+######Improved CSS Animation Performance
 
 Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function.
 
@@ -168,6 +176,8 @@ function updatePositions() {
   }
 }
 ```
+
+######Improved Efficiency
 
 Moved the calculation which utilizes the scrollTop method outside of the loop.
 
@@ -197,6 +207,8 @@ function updatePositions() {
 }
 ```
 
+######Reduced Browser Paint Events
+
 Removed height and width styles from the generated pizza elements and resized the pizza image to 100 x 100 to prevent the browser from having to resize the images.
 
 ```js
@@ -215,7 +227,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-Added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener.
+######Optimized Animations
+
+Added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener which optimizes concurrent animations together into a single reflow and repaint cycle.
 
 ```js
 window.addEventListener('scroll', function() {
