@@ -18,24 +18,29 @@ Contains the production ready CSS, JS and images built from the app/ directory.
 
 Contains the HTML for the pizza and individual project pages.
 
-##Build
+##The Build
 
-The [Brunch](http://brunch.io) HTML5 build tool was used to concatenate and minify scripts and style sheets.
+The [Brunch](http://brunch.io) HTML5 build tool is used to concatenate and minify scripts and style sheets in this project.
 
 ######Install Brunch
 
-`npm install -g brunch`
+```
+$ npm install -g brunch
+```
 
 ######Develop
 
-`brunch watch --server`
+```
+$ brunch watch --server
+```
 
 ######Build
 
-`brunch build --production`
+```
+$ brunch build --production
+```
 
-More detailed documentation can be found [here](https://github.com/brunch/brunch/tree/stable/docs).
-
+Detailed documentation can be found [here](https://github.com/brunch/brunch/tree/stable/docs).
 
 ##Optimization
 
@@ -71,7 +76,7 @@ The following changes where made to fix the low FPS and produce a consistent 60F
 
 Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
-```js 
+```js
 var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 ```
 
@@ -135,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
-``` 
+```
 
-Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function. 
+Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function.
 
 
 ```js
@@ -173,7 +178,7 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   var top = (document.body.scrollTop / 1250);
-  
+
   for (var i = items.length; i--;) {
     var phase = Math.sin( top + (i % 5));
     //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -296,7 +301,7 @@ function changePizzaSizes(size) {
 
 ![Breakdown Image 02](readme_images/breakdown-04.png)
 
-######After optimizing loops 
+######After optimizing loops
 
 ![Breakdown Image 03](readme_images/breakdown-05.png)
 
