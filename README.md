@@ -327,7 +327,7 @@ function changePizzaSizes(size) {
 
 ### Index Page
 
-#### Google PageSpeed Score before any fixes
+###### Google PageSpeed Score before any fixes
 
 ![Breakdown Image 11](readme_images/breakdown-01.png)
 
