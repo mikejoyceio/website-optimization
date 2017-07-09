@@ -337,7 +337,7 @@ function changePizzaSizes(size) {
 
 ### Sliding Pizzas
 
-###### FPS Before any fixes
+###### FPS before any fixes
 
 ![Breakdown Image 01](readme_images/breakdown-03.png)
 
