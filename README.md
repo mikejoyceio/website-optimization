@@ -12,13 +12,13 @@ Point your browser to http://optimization.mikejoyce.io
 
 #### Local
 
-**1.** Clone this repo:
+###### 1. Clone this repo
 
 ```
 $ git clone https://github.com/mikejoyceio/website-optimization
 ````
 
-**2.** Serve the website:
+###### 2. Serve the website
 
 ```
 $ python -m SimpleHTTPServer
@@ -26,7 +26,7 @@ $ python -m SimpleHTTPServer
 
 Detailed Python Simple Server instructions can been found [here](https://docs.python.org/2/library/basehttpserver.html).
 
-**3.** Open the website:
+###### 3. Open the website
 
 ```
 $ open "http://localhost:8000"
