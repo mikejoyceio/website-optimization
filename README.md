@@ -1,6 +1,6 @@
 # Website Optimization
 
-##### Project Overview
+#### Project Overview
 
 Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The task was to optimize a provided website with a number of optimization and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
 
@@ -10,7 +10,7 @@ Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity
 
 Point your browser to http://optimization.mikejoyce.io
 
-###### Locally
+###### Local
 
 **1.** Clone this repo:
 
