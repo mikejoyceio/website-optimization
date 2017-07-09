@@ -1,6 +1,6 @@
 # Website Optimization
 
-#### &lt;span style="color: blue;">Project Overview</span>
+<h2 style="color: blue;">Project Overview</h2>
 
 Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The task was to optimize a provided website with a number of optimization and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
 
