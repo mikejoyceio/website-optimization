@@ -82,19 +82,19 @@ The following changes were made:
 
 [Inlined](https://developers.google.com/speed/pagespeed/module/filter-css-inline) all of the CSS into the head of the document and added the HTML [media="print"](https://developer.mozilla.org/de/docs/Web/HTML/Element/link) attribute to the external style sheet link for print styles.
 
-###### JS
+###### - JS
 
 Added the [HTML async attribute](https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts) to all script tags and used the [Brunch](http://brunch.io/) build tool to concatenate and minify.
 
-###### Images
+###### - Images
 
 Resized images that were too large and compressed all images with the [Kraken](https://kraken.io/web-interface) image compression tool.
 
-###### Gzip compression
+###### - Gzip compression
 
 Enabled the [mod_deflate](http://httpd.apache.org/docs/2.2/mod/mod_deflate.html) (gzip) Apache module on the server.
 
-###### Browser Caching
+###### - Browser Caching
 
 Leveraged [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) by including an [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file in the root of the website. The file contains expires headers, which sets long expiration times for all CSS, JavaScript and images.
 
@@ -102,7 +102,7 @@ Leveraged [browser caching](https://developers.google.com/speed/docs/insights/Le
 
 The following changes where made to fix the low FPS and produce a consistent 60FPS frame rate when scrolling the page:
 
-###### Fixed Typo
+###### - Fixed Typo
 
 Renamed the mis-named 'noise' value in the global adjectives array literal to ‘noisy’ to match the switch case ‘noisy’ in the getAdj function.
 
@@ -110,7 +110,7 @@ Renamed the mis-named 'noise' value in the global adjectives array literal to �
 var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic", "insulting", "praise", "scientific"];`
 ```
 
-###### Optimized Loops
+###### - Optimized Loops
 
 Optimized the loops contained in the updatePositions function and the onDOMContentLoaded event handler.
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-###### Reduced Pizza Elements
+###### - Reduced Pizza Elements
 
 Reduced the amount of sliding pizza elements generated from 200 down to 31, which still sufficiently fills the screen with sliding pizzas.
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-###### Improved CSS Animation Performance
+###### - Improved CSS Animation Performance
 
 Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function.
 
@@ -205,7 +205,7 @@ function updatePositions() {
 }
 ```
 
-###### Improved Efficiency
+###### - Improved Efficiency
 
 Moved the calculation which utilizes the scrollTop method outside of the loop.
 
@@ -235,7 +235,7 @@ function updatePositions() {
 }
 ```
 
-###### Reduced Browser Paint Events
+###### - Reduced Browser Paint Events
 
 Removed height and width styles from the generated pizza elements and resized the pizza image to 100 x 100 to prevent the browser from having to resize the images.
 
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-###### Optimized Animations
+###### - Optimized Animations
 
 Added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener which optimizes concurrent animations together into a single reflow and repaint cycle.
 
@@ -269,7 +269,7 @@ window.addEventListener('scroll', function() {
 
 The following changes were made to resize the pizzas in under 5ms:
 
-###### Improved Efficiency
+###### - Improved Efficiency
 
 Moved the determineDx function call inside the changePizzaSizes function out of the loop. Selected only the first .randomPizzaContainer in the document.
 
@@ -308,7 +308,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-###### Optimized Loops
+###### - Optimized Loops
 
 Optimized loop inside the changePizzaSizes function.
 
@@ -327,7 +327,7 @@ function changePizzaSizes(size) {
 
 ### Index Page
 
-###### Google PageSpeed Score before any fixes
+#### Google PageSpeed Score before any fixes
 
 ![Breakdown Image 11](readme_images/breakdown-01.png)
 
