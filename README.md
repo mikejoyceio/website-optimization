@@ -1,6 +1,6 @@
 # Website Optimization
 
-<h2 style="color: blue;">Project Overview</h2>
+#### Project Overview
 
 Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The task was to optimize a provided website with a number of optimization and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
 
@@ -78,7 +78,7 @@ The index page originally had a Google PageSpeed score of 35/100 for mobile and 
 
 The following changes were made:
 
-###### CSS
+###### - CSS
 
 [Inlined](https://developers.google.com/speed/pagespeed/module/filter-css-inline) all of the CSS into the head of the document and added the HTML [media="print"](https://developer.mozilla.org/de/docs/Web/HTML/Element/link) attribute to the external style sheet link for print styles.
 
