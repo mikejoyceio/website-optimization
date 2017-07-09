@@ -1,6 +1,6 @@
 # Website Optimization
 
-###### Project Overview
+##### Project Overview
 
 Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The task was to optimize a provided website with a number of optimization and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-######Improved CSS Animation Performance
+###### Improved CSS Animation Performance
 
 Applied translateX() and translateZ(0) transform functions to the sliding pizza elements within the updatePositions function.
 
@@ -369,7 +369,7 @@ function changePizzaSizes(size) {
 
 ![Breakdown Image 08](readme_images/breakdown-10.png)
 
-###Resized Pizzas
+### Resized Pizzas
 
 ###### Resize time before fixes
 
