@@ -6,7 +6,7 @@ Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity
 
 ## Getting Started
 
-##### Live
+#### Live
 
 Point your browser to http://optimization.mikejoyce.io
 
