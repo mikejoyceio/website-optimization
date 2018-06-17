@@ -68,7 +68,7 @@ $ brunch watch --server
 $ brunch build --production
 ```
 
-Detailed documentation can be found [here](https://github.com/brunch/brunch/tree/stable/docs).
+Detailed documentation can be found [here](https://github.com/brunch/brunch).
 
 ## Optimization
 
