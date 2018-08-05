@@ -6,6 +6,9 @@ exports.config =
     wrapper: false
   paths:
     public: 'public'
+  npm: {
+    enabled: false
+  }
   files:
     javascripts:
       joinTo: 

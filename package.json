@@ -1,21 +1,21 @@
 {
-  "name": "your-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "name": "website-performance-optimization",
+  "description": "A step-by-step rundown of optimizations made to a website with a number of optimization and performance-related issues, so that it achieves a high PageSpeed Insights score and runs at 60 frames per second.",
+  "author": "Mike Joyce [hello@mikejoyce.io]",
+  "version": "1.0",
+  "repository": "https://github.com/mikejoyceio/website-optimization",
   "scripts": {
     "start": "brunch watch --server",
     "test": "brunch test"
   },
   "dependencies": {
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "brunch": "^2.10.15",
     "clean-css-brunch": ">= 1.0 < 1.8",
-    "auto-reload-brunch": ">= 1.0 < 1.8"
-  }
+    "css-brunch": ">= 1.0 < 1.8",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8"
+  },
+  "main": "index.js",
+  "license": "MIT"
 }
