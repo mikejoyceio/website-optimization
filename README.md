@@ -53,7 +53,7 @@ The [Brunch](http://brunch.io) HTML5 build tool is used to concatenate and minif
 ###### Install Brunch
 
 ```
-$ npm install -g brunch
+$ yarn install
 ```
 
 ###### Develop
