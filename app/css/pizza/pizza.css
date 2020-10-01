@@ -10,6 +10,10 @@
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: black;
+  font-weight:Normal;
+  border-color:black;
+  border-width:2px;
+  text-align:left;
 }
 
 input {
