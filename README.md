@@ -6,10 +6,6 @@ A step-by-step rundown of optimizations made to a website with a number of optim
 
 ## Getting Started
 
-###### Live
-
-Point your browser to http://optimization.mikejoyce.io
-
 ###### Local
 
 ###### 1. Clone this repo
